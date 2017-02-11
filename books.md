@@ -1,0 +1,15 @@
+---
+layout: post
+title: 我的书单
+permalink: /books
+---
+
+* content
+{:toc}
+
+
+2017书单
+-----------------------------------------------------------------
+
++ 《Deeplearning4j Documentation》
++ 《数理统计》
