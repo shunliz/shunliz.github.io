@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll and Renge!"
-date:   2016-06-16 13:08:09 -0700
+title:  "First post to Renge!"
+date:   2017-02-11 11:56:09 -0800
 categories: openstack
 tags: openstack cloud
 ---
