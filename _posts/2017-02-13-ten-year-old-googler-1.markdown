@@ -1,9 +1,9 @@
 ﻿---
 layout: post
-title:  "ten years old googler 1"
-date:   2017-02-13 16:01:09 -0800
-categories: software-engineering
-tags: software-engineering
+title:  "google 10年工程师谈软件法开发"
+date:   2017-02-11 19:24:09 -0800
+categories: Life
+tags: Life
 ---
  
 Abstract
