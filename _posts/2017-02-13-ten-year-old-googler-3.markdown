@@ -2,10 +2,10 @@
 layout: post
 title:  "10年老员工谈Google的软件工程实践（三）"
 date:   2017-02-13 16:01:09 -0800
-categories: software engineering
-tags: software engineering
+categories: software-engineering
+tags: software-engineering
 ---
-
+ 
 # 4. People management 
 
 ## 4.1. Roles

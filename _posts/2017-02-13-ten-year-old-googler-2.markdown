@@ -2,10 +2,10 @@
 layout: post
 title:  "10年老员工谈Google的软件工程实践（二）"
 date:   2017-02-13 16:01:09 -0800
-categories: software engineering
-tags: software engineering
+categories: software-engineering
+tags: software-engineering
 ---
-
+ 
 ## 2.4. Testing
 
 Unit Testing is strongly encouraged and widely practiced at Google. All code used in production is expected to have unit tests, and the code review tool will highlight if source files are added without corresponding tests. Code reviewers usually require that any change which adds new functionality should also add new tests to cover the new functionality. Mocking frameworks ***which allow construction of lightweight unit tests even for code with dependencies on heavyweight libraries*** are quite popular.
