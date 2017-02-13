@@ -1,6 +1,6 @@
----
+Ôªø---
 layout: post
-title:  "10ƒÍ¿œ‘±π§Ã∏Googleµƒ»Ìº˛π§≥Ã µº˘£®“ª£©"
+title:  "10Âπ¥ËÄÅÂëòÂ∑•Ë∞àGoogleÁöÑËΩØ‰ª∂Â∑•Á®ãÂÆûË∑µÔºà‰∏âÔºâ"
 date:   2017-02-13 16:01:09 -0800
 categories: software engineering
 tags: software engineering
@@ -10,7 +10,7 @@ tags: software engineering
 
 ## 4.1. Roles
 
-As we°Øll explain in more detail below, Google separates the engineering and management career progression ladders, separates the tech lead role from management, embeds research within engineering, and supports engineers with product managers, project managers, and site reliability engineers (SREs). It seems likely that at least some of these practices are important to sustaining the culture of innovation that has developed at Google.
+As we‚Äôll explain in more detail below, Google separates the engineering and management career progression ladders, separates the tech lead role from management, embeds research within engineering, and supports engineers with product managers, project managers, and site reliability engineers (SREs). It seems likely that at least some of these practices are important to sustaining the culture of innovation that has developed at Google.
 
 Google has a small number of different roles within engineering. Within each role, there is a career progression possible, with a sequence of levels, and the possibility of promotion (with associated improvement to compensation, e.g. salary) to recognize performance at the next level.
 
@@ -21,7 +21,7 @@ The main roles are these:
  This is the only people management role in this list. Individuals in other roles such as Software Engineer may manage people, but Engineering Managers always manage people. Engineering Managers are often former Software Engineers, and invariably have considerable technical expertise, as well as people skills.
  
 There is a distinction between technical leadership and people management.
-Engineering Managers do not necessarily lead projects; projects are led by a Tech Lead, who can be an Engineering Manager, but who is more often a Software Engineer. A project°Øs Tech Lead has the final say for technical decisions in that project.
+Engineering Managers do not necessarily lead projects; projects are led by a Tech Lead, who can be an Engineering Manager, but who is more often a Software Engineer. A project‚Äôs Tech Lead has the final say for technical decisions in that project.
 
 Managers are responsible for selecting Tech Leads, and for the performance of their teams. They perform coaching and assisting with career development, do performance evaluation (using input from peer feedback, see below), and are responsible for some aspects of compensation. They are also responsible for some parts of the hiring process.
 
@@ -39,7 +39,7 @@ The hiring criteria for this role are very strict, and the bar is extremely high
 
  - Site Reliability Engineer (SRE)
 
-The maintenance of operational systems is done by software engineering teams, rather than traditional sysadmin types, but the hiring requirements for software engineering skills for the SRE are slightly lower than the requirements for the Software Engineering position. The nature and purpose of the SRE role is explained very well and in detail in the SRE book [7], so we won°Øt discuss it further here.
+The maintenance of operational systems is done by software engineering teams, rather than traditional sysadmin types, but the hiring requirements for software engineering skills for the SRE are slightly lower than the requirements for the Software Engineering position. The nature and purpose of the SRE role is explained very well and in detail in the SRE book [7], so we won‚Äôt discuss it further here.
 
  - Product Manager
  
@@ -53,34 +53,34 @@ The ratio of Software Engineers to Product Managers and Program Managers varies 
 
 ## 4.2. Facilities
 
-Google is famous for it°Øs fun facilities, with features like slides, ball pits, and games rooms.
+Google is famous for it‚Äôs fun facilities, with features like slides, ball pits, and games rooms.
 
-That helps attract and retain good talent. Google°Øs excellent cafes, which are free to employees, provide that function too, and also subtly encourage Googlers to stay in the office; hunger is never a reason to leave. The frequent placement of °∞microkitchens°± where employees can grab snacks and drinks serves the same function too, but also acts as an important source of informal idea exchange, as many conversations start up there. Gyms, sports, and on-site massage help keep employees fit, healthy, and happy, which improves productivity and retention.
+That helps attract and retain good talent. Google‚Äôs excellent cafes, which are free to employees, provide that function too, and also subtly encourage Googlers to stay in the office; hunger is never a reason to leave. The frequent placement of ‚Äúmicrokitchens‚Äù where employees can grab snacks and drinks serves the same function too, but also acts as an important source of informal idea exchange, as many conversations start up there. Gyms, sports, and on-site massage help keep employees fit, healthy, and happy, which improves productivity and retention.
 
 The seating at Google is open-plan, and often fairly dense. While controversial [20], this encourages communication, sometimes at the expense of individual concentration, and is economical.
 
 Employees are assigned an individual seat, but seats are re-assigned fairly frequently (e.g. every 6-12 months, often as a consequence of the organization expanding), with seating chosen by managers to facilitate and encourage communication, which is always easier between adjacent or nearly adjacent individuals.
 
-Google°Øs facilities all have meeting rooms fitted with state-of-the-art video conference facilities, where connecting to the other party for a prescheduled calendar invite is just a single tap on the screen.
+Google‚Äôs facilities all have meeting rooms fitted with state-of-the-art video conference facilities, where connecting to the other party for a prescheduled calendar invite is just a single tap on the screen.
 
 ## 4.3. Training
 
 Google encourages employee education in many ways:
- - New Googlers (°∞Nooglers°±) have a mandatory initial training course.
- - Technical staff (SWEs and research scientists) start by doing °∞Codelabs°±: short online
+ - New Googlers (‚ÄúNooglers‚Äù) have a mandatory initial training course.
+ - Technical staff (SWEs and research scientists) start by doing ‚ÄúCodelabs‚Äù: short online
 training courses in individual technologies, with coding exercises.
  - Google offers employees a variety of online and in-person training courses.
  - Google also offers support for studying at external institutions.
 
-In addition, each Noogler is usually appointed an official °∞Mentor°± and a separate °∞Buddy°± to help get them up to speed. Unofficial mentoring also occurs via regular meetings with their manager, team meetings, code reviews, design reviews, and informal processes.
+In addition, each Noogler is usually appointed an official ‚ÄúMentor‚Äù and a separate ‚ÄúBuddy‚Äù to help get them up to speed. Unofficial mentoring also occurs via regular meetings with their manager, team meetings, code reviews, design reviews, and informal processes.
 
 ## 4.4 Transfers
 
-Transfers between different parts of the company are encouraged, to help spread knowledge and technology across the organization and improve cross-organization communication. Transfers between projects and/or offices are allowed for employees in good standing after 12 months in a position. Software engineers are also encouraged to do temporary assignments in other parts of the organization, e.g. a six-month °∞rotation°± (temporary assignment) in SRE (Site Reliability Engineering).
+Transfers between different parts of the company are encouraged, to help spread knowledge and technology across the organization and improve cross-organization communication. Transfers between projects and/or offices are allowed for employees in good standing after 12 months in a position. Software engineers are also encouraged to do temporary assignments in other parts of the organization, e.g. a six-month ‚Äúrotation‚Äù (temporary assignment) in SRE (Site Reliability Engineering).
 
 ## 4.5. Performance appraisal and rewards
 
-Feedback is strongly encouraged at Google. Engineers can give each other explicit positive feedback via °∞peer bonuses°± and °∞kudos°±. Any employee can nominate any other employee for a °∞peer bonus°± -- a cash bonus of $100 -- up to twice per year, for going beyond the normal call of duty, just by filling in a web form to describe the reason. Team-mates are also typically notified when a peer bonus is awarded. Employees can also give °∞kudos°±, formalized statements of praise which provide explicit social recognition for good work, but with no financial reward; for °∞kudos°± there is no requirement that the work be beyond the normal call of duty, and no limit on the number of times that they can be bestowed.
+Feedback is strongly encouraged at Google. Engineers can give each other explicit positive feedback via ‚Äúpeer bonuses‚Äù and ‚Äúkudos‚Äù. Any employee can nominate any other employee for a ‚Äúpeer bonus‚Äù -- a cash bonus of $100 -- up to twice per year, for going beyond the normal call of duty, just by filling in a web form to describe the reason. Team-mates are also typically notified when a peer bonus is awarded. Employees can also give ‚Äúkudos‚Äù, formalized statements of praise which provide explicit social recognition for good work, but with no financial reward; for ‚Äúkudos‚Äù there is no requirement that the work be beyond the normal call of duty, and no limit on the number of times that they can be bestowed.
 
 Managers can also award bonuses, including spot bonuses, e.g. for project completion. And as with many companies, Google employees get annual performance bonuses and equity awards based on their performance.
 
@@ -94,9 +94,9 @@ Manager performance is assessed with feedback surveys; every employee is asked t
 
 We have briefly described most of the key software engineering practices used at Google. Of course Google is now a large and diverse organization, and some parts of the organization have different practices. But the practices described here are generally followed by most teams at Google.
 
-With so many different software engineering practices involved, and with so many other reasons for Google°Øs success that are not related to our software engineering practices, it is extremely difficult to give any quantitative or objective evidence connecting individual practices with improved outcomes. However, these practices are the ones that have stood the test of time at Google, where they have been subject to the collective subjective judgement of many thousands of excellent software engineers.
+With so many different software engineering practices involved, and with so many other reasons for Google‚Äôs success that are not related to our software engineering practices, it is extremely difficult to give any quantitative or objective evidence connecting individual practices with improved outcomes. However, these practices are the ones that have stood the test of time at Google, where they have been subject to the collective subjective judgement of many thousands of excellent software engineers.
 
-For those in other organizations who are advocating for the use of a particular practice that happens to be described in this paper, perhaps it will help to say °∞it°Øs good enough for Google°±.
+For those in other organizations who are advocating for the use of a particular practice that happens to be described in this paper, perhaps it will help to say ‚Äúit‚Äôs good enough for Google‚Äù.
 
 # Acknowledgements
 
@@ -133,9 +133,9 @@ https://landing.google.com/sre/book.html
 
 [14] How Google Tests Software, J. A. Whittaker, J. Arbon, and J. Carollo, Addison-Wesley, 2012.
 
-[15] Release Engineering Practices and Pitfalls, H. K. Wright and D. E. Perry, in Proceedings of the 34th International Conference on Software Engineering (ICSE °Ø12), IEEE, 2012, pp. 1281®C1284. http://www.hyrumwright.org/papers/icse2012.pdf
+[15] Release Engineering Practices and Pitfalls, H. K. Wright and D. E. Perry, in Proceedings of the 34th International Conference on Software Engineering (ICSE ‚Äô12), IEEE, 2012, pp. 1281‚Äì1284. http://www.hyrumwright.org/papers/icse2012.pdf
 
-[16] Large-Scale Automated Refactoring Using ClangMR, H. K. Wright, D. Jasper, M. Klimek, C. Carruth, Z. Wan, in Proceedings of the 29th International Conference on Software Maintenance (ICSM °Ø13), IEEE, 2013, pp. 548®C551.
+[16] Large-Scale Automated Refactoring Using ClangMR, H. K. Wright, D. Jasper, M. Klimek, C. Carruth, Z. Wan, in Proceedings of the 29th International Conference on Software Maintenance (ICSM ‚Äô13), IEEE, 2013, pp. 548‚Äì551.
 
 [17] Why Google Stores Billions of Lines of Code in a Single Repository, Rachel Potvin, presentation. https://www.youtube.com/watch?v=W71BTkUbdqE
 
