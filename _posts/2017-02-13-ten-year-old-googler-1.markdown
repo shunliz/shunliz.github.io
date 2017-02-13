@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "google 10年工程师谈软件法开发"
+title:  "10年老员工谈Google的软件工程实践（一）"
 date:   2017-02-11 19:24:09 -0800
 categories: Life
 tags: Life
