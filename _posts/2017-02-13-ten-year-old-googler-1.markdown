@@ -1,9 +1,9 @@
 ---
 layout: post
 title:  "10年老员工谈Google的软件工程实践（一）"
-date:   2017-02-11 19:24:09 -0800
-categories: Life
-tags: Life
+date:   2017-02-13 16:01:09 -0800
+categories: software-engineering
+tags: software-engineering
 ---
  
 Abstract
