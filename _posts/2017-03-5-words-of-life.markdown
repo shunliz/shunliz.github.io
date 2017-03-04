@@ -15,7 +15,7 @@ tags: life
  - 摧毁品德的，名利目前得不少却会落个骂名的；
  - 摧毁未来的，合作的人不注重未来。学会说不，为更好的未来。
  
- ![img1](images/life/71ced708jw1drhfdhz7jij.jpg)
+ ![img1](http://ww2.sinaimg.cn/bmiddle/71ced708jw1drhfdhz7jij.jpg)
 
 # 【管理心理：好主管应做的8件事】
   1. 给下属争取更多利益，而非公司能给的额度，下属会以绩效的方式翻倍回报；
@@ -57,7 +57,7 @@ tags: life
 2. 时间自由：有可支配时间灵活安排工作、休息和娱乐；
 3. 心灵自由：跟随自己内心，不让梦想憋屈。实现自由最容易的时间段，不是未来的某天而是现在。你同意吗？
 
-![egales](image/life/71ced708jw1drg9xf366zj.jpg)
+![egales](http://ww4.sinaimg.cn/bmiddle/71ced708jw1drg9xf366zj.jpg)
 
 
 # 【做人十心机】
@@ -163,5 +163,5 @@ tags: life
 
 【人生“势利表”：你能看清第几行？】
 
-![eye](images/life/61e44a60jw1draokeyxb8j.jpg)
+![eye](http://ww2.sinaimg.cn/bmiddle/61e44a60jw1draokeyxb8j.jpg)
 
