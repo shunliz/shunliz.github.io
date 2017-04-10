@@ -8,7 +8,7 @@ tags: Openstack Kolla
 
 最近在搞Openstack社区做贡献，想看看Kolla项目是否可以参与。就自己通过Kolla部署了一套Openstack+Ceph的环境。
 
-#Kolla 介绍
+# Kolla 介绍
 Kolla项目利用Docker、Ansible来完成部署OpenStack。主要是利用Docker容器的隔离性来达到OpenStack的原数据升级、回退再升级。整个升级、回退的过程更容易控制影响范围，降低整个OpenStack的运维复杂度。Kolla提供了生产级别的OpenStack Service Containers。基于社区的最佳实践，提供了更好、更快、更可靠的 、易操作 OpenStack的部署工具。
 
 解决的问题：
@@ -27,9 +27,9 @@ Kolla 主要包括两个项目：
 1. 生成需要的Openstack服务的Docker镜像
 2. 定义部署topology， 通过Ansible部署整个Openstack集群
 
-#部署过程
+# 部署过程
 
-##1. 环境准备
+## 1. 环境准备
 4台Esxi虚拟机, 操作系统centos7：   
 | hostname | mng int | ceph int | ext int|  sda| sdb | sdc | sdd |
 | :-------- | --------:| --------:| --------:| --------:| --------:| :--: | 
@@ -83,7 +83,7 @@ pip install -r requirements.txt
 pip install .
 ```
 
-##3. 生成镜像
+## 3. 生成镜像
 生成镜像只需要在kollar节点执行即可
 ```
  # kolla-build –b centos –t binary –p default
@@ -109,7 +109,7 @@ gate = ceph,cinder,data,dind,glance,haproxy,heat,horizon,keepalived,keystone,kol
 # kolla-build –b centos –t binary –p ceph
 ```
 
-##3. 搭建私有docker registry
+## 3. 搭建私有docker registry
 其实不用搭建私有docker registry也是可以的。但是国内访问docker hub网速太慢，Openstack的docker镜像动辄几百M，有的上G。所以搭建一个私有docker registry可以本地按照上边的步骤生成好docker镜像，然后配置所有机器的通过私有docker registry下载镜像，可以加快部署速度。
 
 搭建docker registry过程坑比较多：
@@ -138,7 +138,7 @@ do
 done
 ```
 
-##4. 部署Openstack
+## 4. 部署Openstack
 ### 4.1 配置文件修改
 将三台集群节点都按照上面安装kolla，然后3台互相免密码登录，编辑hosts文件，关闭防火墙和selinux
 ```
@@ -204,7 +204,7 @@ kolla1
 ```
 只需要修改前边几个初始的组即可， 需要精细控制部署方式的话，可以修改后边的内容。根据自己需求定义组和机器的对应关系。
 
-###4.2 ceph准备
+### 4.2 ceph准备
 在3台虚拟机的节点上，除去系统盘还有有其它3块硬盘，sdb、sdc、sdd
 这里我们将sdb和sdc做为osd节点，sdd为日志节点。Kolla对ceph的osd及日志盘的识别是通过卷标来实现的，
 如osd的卷标为KOLLA_CEPH_OSD_BOOTSTRAP,
