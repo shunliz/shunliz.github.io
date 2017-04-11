@@ -38,6 +38,8 @@ Kolla 主要包括两个项目：
 | kolla3 | 192.168.8.72 |  10.10.9.103   | for br-ex | sys | osd1 | osd2 | joournal |
 | kollar | 192.168.8.73 |      | ||||
 
+github.io显示不了markdown的表格，只能将就看吧。
+
 kolla{1,2,3}是用来部署Openstack集群， kollar是用来生成dockker镜像的和作为私有docker hub的机器。
 
 所有机器执行：
@@ -71,7 +73,7 @@ systemctl stop libvirtd.service
 systemctl disable libvirtd.service
 ```
 
-##2. 下载安装kolla&kolla-ansible
+## 2. 下载安装kolla&kolla-ansible
 所有机器都执行：
 ```
 git clone  https://github.com/openstack/kolla
@@ -103,10 +105,11 @@ default = data,kolla-ansible,glance,haproxy,heat,horizon,keepalived,keystone,mem
 gate = ceph,cinder,data,dind,glance,haproxy,heat,horizon,keepalived,keystone,kolla-ansible,mariadb,memcached,neutron,nova,openvswitch,rabbitmq,rsyslog
 ```
 
-如果是基本安装，default就可以了。如果有特殊的组件需要安装，需要根据profiles选择来生成镜像或者手动自己单个生成镜像。 比如这里需要安装ceph，就需要手工生成ceph相关的docker镜像。
+如果是基本安装，default就可以了。如果有特殊的组件需要安装，需要根据profiles选择来生成镜像或者手动自己单个生成镜像。 比如这里需要安装ceph，就需要手工生成ceph相关的docker镜像。 这里有点坑， default里边竟然没有cinder， cinder也需要手动build。我build的是default，貌似gate更符合我的要求。
 
 ```
 # kolla-build –b centos –t binary –p ceph
+# kolla-build –b centos –t binary –p cinder
 ```
 
 ## 3. 搭建私有docker registry
@@ -243,6 +246,12 @@ osd pool default min size = 1
 # kolla-ansible -i multinode post-deploy
 ```
 
-#扩展
+### 部署失败处理
+1. Ansible相关的日志都在syslog中， centos在/var/log/message里
+2. docker内部命令失败，可以手动启动docker镜像，然后进入docker执行相关命令，查看错误日志。
+3. Kolla还有一个专门的日志容器
+
+# 扩展
+
 
 
