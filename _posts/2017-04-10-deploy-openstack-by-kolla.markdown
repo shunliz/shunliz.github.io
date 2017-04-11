@@ -38,8 +38,6 @@ Kolla 主要包括两个项目：
 | kolla3 | 192.168.8.72 |  10.10.9.103   | for br-ex | sys | osd1 | osd2 | joournal |
 | kollar | 192.168.8.73 |      | ||||
 
-github.io显示不了markdown的表格，只能将就看吧。
-
 kolla{1,2,3}是用来部署Openstack集群， kollar是用来生成dockker镜像的和作为私有docker hub的机器。
 
 所有机器执行：
@@ -249,9 +247,24 @@ osd pool default min size = 1
 ### 部署失败处理
 1. Ansible相关的日志都在syslog中， centos在/var/log/message里
 2. docker内部命令失败，可以手动启动docker镜像，然后进入docker执行相关命令，查看错误日志。
-3. Kolla还有一个专门的日志容器
+3. 通过docker inspect dockerid也可以看到容器挂载的日志目录/var/lib/docker/volumes/kolla_logs/_data。
+4. 部署失败，报'Fetching Ceph keyrings ... No JSON object could be decoded'，执行
+```
+ansible -i multinode -a 'docker volume rm ceph_mon_config'  ceph-mon
+```
+通常是因为第一次部署失败了，导致ceph的配置文件的启动的有问题导致的。
+5. mariadb启动不了，连接超时。 手动重新启动一下mariadb。我部署的时候由于虚拟机OOM，重启后mariadb容器自动启动，但是端口没有代码，部署的时候就报超时，手动重启mariadb容器，问题解决。最后的结果应该如下面：
+```
+[root@kolla1 ~]# netstat -ntlp |grep 3306
+tcp        0      0 192.168.8.70:3306       0.0.0.0:*               LISTEN      20536/mysqld        
+tcp        0      0 192.168.8.75:3306       0.0.0.0:*               LISTEN      15500/haproxy 
+```
 
 # 扩展
+
+
+
+
 
 
 
