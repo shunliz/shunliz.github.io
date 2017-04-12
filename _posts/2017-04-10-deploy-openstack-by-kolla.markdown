@@ -8,7 +8,7 @@ tags: Openstack Kolla
 
 最近在搞Openstack社区做贡献，想看看Kolla项目是否可以参与。就自己通过Kolla部署了一套Openstack+Ceph的环境。
 
-# Kolla 介绍
+# 一、Kolla 介绍
 Kolla项目利用Docker、Ansible来完成部署OpenStack。主要是利用Docker容器的隔离性来达到OpenStack的原数据升级、回退再升级。整个升级、回退的过程更容易控制影响范围，降低整个OpenStack的运维复杂度。Kolla提供了生产级别的OpenStack Service Containers。基于社区的最佳实践，提供了更好、更快、更可靠的 、易操作 OpenStack的部署工具。
 
 解决的问题：
@@ -27,7 +27,7 @@ Kolla 主要包括两个项目：
 1. 生成需要的Openstack服务的Docker镜像
 2. 定义部署topology， 通过Ansible部署整个Openstack集群
 
-# 部署过程
+# 二、部署过程
 
 ## 1. 环境准备
 4台Esxi虚拟机, 操作系统centos7：   
@@ -244,7 +244,7 @@ osd pool default min size = 1
 # kolla-ansible -i multinode post-deploy
 ```
 
-### 部署失败处理
+### 6. 部署失败处理
 1. Ansible相关的日志都在syslog中， centos在/var/log/message里
 2. docker内部命令失败，可以手动启动docker镜像，然后进入docker执行相关命令，查看错误日志。
 3. 通过docker inspect dockerid也可以看到容器挂载的日志目录/var/lib/docker/volumes/kolla_logs/_data。
@@ -260,7 +260,53 @@ tcp        0      0 192.168.8.70:3306       0.0.0.0:*               LISTEN      
 tcp        0      0 192.168.8.75:3306       0.0.0.0:*               LISTEN      15500/haproxy 
 ```
 
-# 扩展
+# 三、扩展
+
+## 1.升级
+假设初始部署的是4.0。0（pike）， 修改global.yml
+```
+openstack_version: 4.0.0
+```
+部署集群
+```
+kolla-ansible deploy
+```
+
+版本做了修改，需要升级一个小版本，修改global.yml
+```
+openstack_version: 4.0.1
+```
+升级集群
+```
+kolla-ansible upgrade
+```
+
+>**注意：** 
+1. 升级过程中libvirt的容器中如果还有虚拟机在运行，升级可能失败，Kolla社区还在努力解决中
+2. Kolla社区建议使用brtfs或者aufs来存储容器数据， lvm的driver可能会导致有些容器不能删除。
+
+## 2.一键部署
+1. Build docker镜像的机器可以做成一个虚拟机（部署机）， 提前build好所有的Kolla镜像， 内置一个registry，导入所有自己build的Kolla镜像到registry。
+2. 部署机安装Kolla, Kolla-ansible, 内置脚本配置前期的准备工作， 关闭防火墙， 配置无密码访问，域名等。通过ansible批量在所有机器执行。
+3. 开始部署时只需要根据自己的集群的topology调整 inventory中的topology文件， 调整global.yml中集群的一些参数。 然后执行部署脚本，部署脚本中可以先执行2步骤中的前期准备工作，然后再执行：
+```
+#kolla-ansible -i multinode deploy  
+```
+剩下的就是等待30分钟左右的时间，一个自己定制的Openstack集群就部署完成了。执行post deploy获取rc文件，可以开始使用自己部署的Openstack集群了。
+
+## 3. 裸机provision部分
+Kolla现在一个小缺憾就是把操作系统部署过程没有cover，感觉也不应该由Kolla来cover。
+
+如果是在虚拟机化环境部署，相对简单一些。比如调用Openstack API或者AWS API创建一堆虚拟机，然后在上边部署Openstack，所有可以串起来自动化完成。
+
+ 如果是在裸机上边部署Openstack，就需要和PXE结合，需要自己开发相关PXE部署代码，实现裸机操作系统的部署，实现完全自动化部署。
+
+## 3. 一些有用的工具
+* tools/cleanup-containers，在需要重新部署集群的时候，可以通过这个工具清理所有运行的容器。
+* tools/cleanup-host ， 在需要重新部署集群的时候，可以通过这个工具清理docker 主机的网络改动。通常启动了neutron-agent的容器需要执行这个工具。
+* tools/cleanup-images， 可以清理所有自己build的 docker image。
+
+
 
 
 
