@@ -264,6 +264,11 @@ ansible -i multinode -a 'docker volume rm ceph_mon_config'  ceph-mon
 tcp        0      0 192.168.8.70:3306       0.0.0.0:*               LISTEN      20536/mysqld        
 tcp        0      0 192.168.8.75:3306       0.0.0.0:*               LISTEN      15500/haproxy 
 ```
+6. 容器启动问题。 容器启动过程中出问题，比如容器启动后由于某种错误导致容器退出&重启。 可以根据
+```
+docker instpect <dockerid>
+```
+查看输出中的LogPath对应的文件，查看看docker启动失败原因。
 
 # 三、扩展
 
@@ -310,6 +315,7 @@ Kolla现在一个小缺憾就是把操作系统部署过程没有cover，感觉�
 * tools/cleanup-containers，在需要重新部署集群的时候，可以通过这个工具清理所有运行的容器。
 * tools/cleanup-host ， 在需要重新部署集群的时候，可以通过这个工具清理docker 主机的网络改动。通常启动了neutron-agent的容器需要执行这个工具。
 * tools/cleanup-images， 可以清理所有自己build的 docker image。
+
 
 
 
