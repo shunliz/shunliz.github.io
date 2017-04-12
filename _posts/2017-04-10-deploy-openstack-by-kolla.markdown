@@ -5,7 +5,6 @@ date:   2017-04-10 13：08:09 -0800
 categories: Openstack
 tags: Openstack Kolla
 ---
-
 最近在搞Openstack社区做贡献，想看看Kolla项目是否可以参与。就自己通过Kolla部署了一套Openstack+Ceph的环境。
 
 # 一、Kolla 介绍
@@ -29,7 +28,7 @@ Kolla 主要包括两个项目：
 
 # 二、部署过程
 
-## 1. 环境准备
+## 2.1 环境准备
 4台Esxi虚拟机, 操作系统centos7：   
 | hostname | mng int | ceph int | ext int|  sda| sdb | sdc | sdd |
 | :-------- | --------:| --------:| --------:| --------:| --------:| :--: | 
@@ -71,7 +70,7 @@ systemctl stop libvirtd.service
 systemctl disable libvirtd.service
 ```
 
-## 2. 下载安装kolla&kolla-ansible
+## 2.2 下载安装kolla&kolla-ansible
 所有机器都执行：
 ```
 git clone  https://github.com/openstack/kolla
@@ -83,7 +82,7 @@ pip install -r requirements.txt
 pip install .
 ```
 
-## 3. 生成镜像
+## 2.3 生成镜像
 生成镜像只需要在kollar节点执行即可
 ```
  # kolla-build –b centos –t binary –p default
@@ -110,7 +109,7 @@ gate = ceph,cinder,data,dind,glance,haproxy,heat,horizon,keepalived,keystone,kol
 # kolla-build –b centos –t binary –p cinder
 ```
 
-## 3. 搭建私有docker registry
+## 2.4 搭建私有docker registry
 其实不用搭建私有docker registry也是可以的。但是国内访问docker hub网速太慢，Openstack的docker镜像动辄几百M，有的上G。所以搭建一个私有docker registry可以本地按照上边的步骤生成好docker镜像，然后配置所有机器的通过私有docker registry下载镜像，可以加快部署速度。
 
 搭建docker registry过程坑比较多：
@@ -139,8 +138,8 @@ do
 done
 ```
 
-## 4. 部署Openstack
-### 4.1 配置文件修改
+## 2.5 部署Openstack
+### 2.5.1 配置文件修改
 将三台集群节点都按照上面安装kolla，然后3台互相免密码登录，编辑hosts文件，关闭防火墙和selinux
 配置docker 访问私有的registry, 修改/usr/lib/systemd/system/docker.service文件, 添加本地库地址，重启docker服务
 ```
@@ -210,7 +209,7 @@ kolla1
 ```
 只需要修改前边几个初始的组即可， 需要精细控制部署方式的话，可以修改后边的内容。根据自己需求定义组和机器的对应关系。
 
-### 4.2 ceph准备
+### 2.5.2 ceph准备
 在3台虚拟机的节点上，除去系统盘还有有其它3块硬盘，sdb、sdc、sdd
 这里我们将sdb和sdc做为osd节点，sdd为日志节点。Kolla对ceph的osd及日志盘的识别是通过卷标来实现的，
 如osd的卷标为KOLLA_CEPH_OSD_BOOTSTRAP,
@@ -232,7 +231,7 @@ osd pool default size = 1
 osd pool default min size = 1
 ```
 
-## 5. 开始安装
+### 2.5.3 开始安装
 先检查有无错误：
 ```
 # kolla-ansible -i multinode prechecks  
@@ -248,8 +247,30 @@ osd pool default min size = 1
 ```
 # kolla-ansible -i multinode post-deploy
 ```
+### 2.5.4 安装完成测试
+经过上边的步骤的等待和安装， 安装结完成后。怎么测试安装的Openstack是不是正常的呢？
 
-### 6. 部署失败处理
+1. 先通过kolla-ansible的命令做个冒烟测试
+```
+kolla-ansible -i multinode check 
+```
+2, 通过命令行测试。 在需要通过命令行操作Openstack的机器上安装openstack-client
+```
+pip install -U python-openstackclient python-neutronclient
+source admin-openrc.sh
+```
+admin-openrc.sh就是安装完成后执行的post-deploy生成的。
+测试Openstack命令行之行：
+```
+[root@kollar kolla]# nova list
++----+------+--------+------------+-------------+----------+
+| ID | Name | Status | Task State | Power State | Networks |
++----+------+--------+------------+-------------+----------+
++----+------+--------+------------+-------------+----------+
+```
+3. 通过horizon访问Openstack。
+
+### 2.5.5 部署失败处理
 1. Ansible相关的日志都在syslog中， centos在/var/log/message里
 2. docker内部命令失败，可以手动启动docker镜像，然后进入docker执行相关命令，查看错误日志。
 3. 通过docker inspect dockerid也可以看到容器挂载的日志目录/var/lib/docker/volumes/kolla_logs/_data。
@@ -269,10 +290,11 @@ tcp        0      0 192.168.8.75:3306       0.0.0.0:*               LISTEN      
 docker instpect <dockerid>
 ```
 查看输出中的LogPath对应的文件，查看看docker启动失败原因。
+7. 实在遇到不能解决的问题时候，就用 kolla-ansible -i multinode destroy 彻底删除重新安装。我就遇到了mariadb集群异常关闭，手动半天恢复不了。当时不知道有 mariadb recovery的功能，就destroy了整个部署，然后重新部署的。
 
 # 三、扩展
 
-## 1.升级
+## 3.1 升级
 假设初始部署的是4.0。0（pike）， 修改global.yml
 ```
 openstack_version: 4.0.0
@@ -295,7 +317,7 @@ kolla-ansible upgrade
 1. 升级过程中libvirt的容器中如果还有虚拟机在运行，升级可能失败，Kolla社区还在努力解决中
 2. Kolla社区建议使用brtfs或者aufs来存储容器数据， lvm的driver可能会导致有些容器不能删除。
 
-## 2.一键部署
+## 3.2 一键部署
 1. Build docker镜像的机器可以做成一个虚拟机（部署机）， 提前build好所有的Kolla镜像， 内置一个registry，导入所有自己build的Kolla镜像到registry。
 2. 部署机安装Kolla, Kolla-ansible, 内置脚本配置前期的准备工作， 关闭防火墙， 配置无密码访问，域名等。通过ansible批量在所有机器执行。
 3. 开始部署时只需要根据自己的集群的topology调整 inventory中的topology文件， 调整global.yml中集群的一些参数。 然后执行部署脚本，部署脚本中可以先执行2步骤中的前期准备工作，然后再执行：
@@ -304,14 +326,14 @@ kolla-ansible upgrade
 ```
 剩下的就是等待30分钟左右的时间，一个自己定制的Openstack集群就部署完成了。执行post deploy获取rc文件，可以开始使用自己部署的Openstack集群了。
 
-## 3. 裸机provision部分
+## 3.3 裸机provision部分
 Kolla现在一个小缺憾就是把操作系统部署过程没有cover，感觉也不应该由Kolla来cover。
 
 如果是在虚拟机化环境部署，相对简单一些。比如调用Openstack API或者AWS API创建一堆虚拟机，然后在上边部署Openstack，所有可以串起来自动化完成。
 
  如果是在裸机上边部署Openstack，就需要和PXE结合，需要自己开发相关PXE部署代码，实现裸机操作系统的部署，实现完全自动化部署。
 
-## 3. 一些有用的命令
+## 3.4 一些有用的命令
 - kolla-ansible -i multinode prechecks 部署集群前，先检查所有节点是否满足部署条件。
 - kolla-ansible -i multinode destroy --yes-i-really-really-mean-it 彻底删除所有的容器和卷。通过这个命令可以清理环境，重新创建集群。
 - kolla-ansible -i multinode mariadb_recovery 用来恢复mariadb集群。采用galera部署mariadb集群时，如果所有节点同时意外断电，会导致集群重新启动时，不能自动恢复。手动恢复比较麻烦，需要找到inodb中的seqno最大的，主节点进入维护模式，再启动其他节点。集群正常后再重新启动主节点。加上所有服务在容器中，手动恢复过程还是比较复杂。Kolla提供这个命令可以在mariadb集群坏了时，一条命令即可恢复。
@@ -319,6 +341,11 @@ Kolla现在一个小缺憾就是把操作系统部署过程没有cover，感觉�
 - kolla-ansible -i multinode reconfigure 重新配置所有Openstack 服务
 - kolla-ansible -i multinode post-deploy 部署完成后获取rc文件
 - kolla-ansible -i multinode check 部署完成后做一个冒烟测试
+
+# 四、结束
+Kolla执行裸机部署和Kubernetes两种部署方式， 由于Kubernetes部署方式还在密集开发中，这次没有使用Kubernetes方式安装。
+
+
 
 
 
