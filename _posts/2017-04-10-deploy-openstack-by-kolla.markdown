@@ -311,10 +311,15 @@ Kolla现在一个小缺憾就是把操作系统部署过程没有cover，感觉�
 
  如果是在裸机上边部署Openstack，就需要和PXE结合，需要自己开发相关PXE部署代码，实现裸机操作系统的部署，实现完全自动化部署。
 
-## 3. 一些有用的工具
-* tools/cleanup-containers，在需要重新部署集群的时候，可以通过这个工具清理所有运行的容器。
-* tools/cleanup-host ， 在需要重新部署集群的时候，可以通过这个工具清理docker 主机的网络改动。通常启动了neutron-agent的容器需要执行这个工具。
-* tools/cleanup-images， 可以清理所有自己build的 docker image。
+## 3. 一些有用的命令
+- kolla-ansible -i multinode prechecks 部署集群前，先检查所有节点是否满足部署条件。
+- kolla-ansible -i multinode destroy --yes-i-really-really-mean-it 彻底删除所有的容器和卷。通过这个命令可以清理环境，重新创建集群。
+- kolla-ansible -i multinode mariadb_recovery 用来恢复mariadb集群。采用galera部署mariadb集群时，如果所有节点同时意外断电，会导致集群重新启动时，不能自动恢复。手动恢复比较麻烦，需要找到inodb中的seqno最大的，主节点进入维护模式，再启动其他节点。集群正常后再重新启动主节点。加上所有服务在容器中，手动恢复过程还是比较复杂。Kolla提供这个命令可以在mariadb集群坏了时，一条命令即可恢复。
+- kolla-ansible -i multinode upgrade 一键升级整个集群到新版本
+- kolla-ansible -i multinode reconfigure 重新配置所有Openstack 服务
+- kolla-ansible -i multinode post-deploy 部署完成后获取rc文件
+- kolla-ansible -i multinode check 部署完成后做一个冒烟测试
+
 
 
 
