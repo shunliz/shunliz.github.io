@@ -1,10 +1,14 @@
 ---
 layout: post
-title:  "Kolla部署多节点Openstack"
+title:  "Openstack Kolla实战"
 date:   2017-04-10 13：08:09 -0800
 categories: Openstack
 tags: Openstack Kolla
 ---
+
+
+[TOC]
+
 最近在搞Openstack社区做贡献，想看看Kolla项目是否可以参与。就自己通过Kolla部署了一套Openstack+Ceph的环境。
 
 # 一、Kolla 介绍
@@ -272,7 +276,7 @@ admin-openrc.sh就是安装完成后执行的post-deploy生成的。
 
 ### 2.5.5 部署失败处理
 1. Ansible相关的日志都在syslog中， centos在/var/log/message里
-2. docker内部命令失败，可以手动启动docker镜像，然后进入docker执行相关命令，查看错误日志。
+2. docker内部命令失败，可以手动启动docker镜像，然后进入docker执行相关命令，查看错误日志, 或者docker logs dockerid。
 3. 通过docker inspect dockerid也可以看到容器挂载的日志目录/var/lib/docker/volumes/kolla_logs/_data。
 4. 部署失败，报'Fetching Ceph keyrings ... No JSON object could be decoded'，执行
 ```
@@ -344,6 +348,9 @@ Kolla现在一个小缺憾就是把操作系统部署过程没有cover，感觉�
 
 # 四、结束
 Kolla执行裸机部署和Kubernetes两种部署方式， 由于Kubernetes部署方式还在密集开发中，这次没有使用Kubernetes方式安装。
+
+
+
 
 
 
