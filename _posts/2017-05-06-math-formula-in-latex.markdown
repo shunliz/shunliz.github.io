@@ -32,8 +32,9 @@ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}
 
 $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
-\lim_{n \to \infty}(1+\frac{1}{x})^{x} = e
-$$ \lim_{n \to \infty}(1+\frac{1}{x})^{x} = e $$
+\lim_{x \to \infty}(1+\frac{1}{x})^{x} = e
+
+$$ \lim_{x \to \infty}(1+\frac{1}{x})^{x} = e $$
 
 
 
