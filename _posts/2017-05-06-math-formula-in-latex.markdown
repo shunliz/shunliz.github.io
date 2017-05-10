@@ -6,6 +6,21 @@ categories: math
 tags: math latex
 ---
 
+![img](http://www.mohu.org/info/symbols/1.GIF)
+
+![img2](http://www.mohu.org/info/symbols/int.GIF)
+
+![img3](http://www.mohu.org/info/symbols/frac.GIF)
+
+![img4](http://www.mohu.org/info/symbols/vec.GIF)
+
+![img5](http://www.mohu.org/info/symbols/brace.GIF)
+
+![img6](http://www.mohu.org/info/symbols/overline.GIF)
+
+![img](http://www.mohu.org/info/symbols/sqrt.GIF)
+![img](http://www.mohu.org/info/symbols/foot.gif)
+
 x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}
 
 $$x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}$$
