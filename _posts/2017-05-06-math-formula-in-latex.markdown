@@ -51,6 +51,10 @@ $$	x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$
 
 $$ \lim_{x \to \infty}(1+\frac{1}{x})^{x} = e $$
 
+cos\theta =\frac{A \cdot B }{|A||\times B|}=\frac{\sum_{i=1}^{n}(A_{i}\times B_{i})}{\sqrt{\sum_{i=1}^{n}A_{i}^{2}} \times \sqrt{\sum_{i=1}^{n}B_{i}^{2}} }
+
+$$ cos\theta =\frac{A \cdot B }{|A||\times B|}=\frac{\sum_{i=1}^{n}(A_{i}\times B_{i})}{\sqrt{\sum_{i=1}^{n}A_{i}^{2}} \times \sqrt{\sum_{i=1}^{n}B_{i}^{2}} } $$
+
 
 
 
