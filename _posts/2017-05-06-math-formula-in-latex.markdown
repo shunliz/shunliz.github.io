@@ -57,6 +57,8 @@ $$ cos\theta =\frac{A \cdot B }{|A||\times B|}=\frac{\sum_{i=1}^{n}(A_{i}\times 
 
 $$ f(z) = tanh(z) = \dfrac{e^z-e^{-z}}{e^z+e^{-z}} $$
 
+$$ f^{'}(z)=1-f(z)^{2} $$
+
 
 
 
