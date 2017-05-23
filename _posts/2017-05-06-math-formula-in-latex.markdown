@@ -59,6 +59,9 @@ $$ f(z) = tanh(z) = \dfrac{e^z-e^{-z}}{e^z+e^{-z}} $$
 
 $$ f^{'}(z)=1-f(z)^{2} $$
 
+$$ J(W,b;x,y)=\frac{1}{2}||h_{W,b}(x)-y||^{2} $$
+
+$$ J(W,b)=[\frac{1}{m}\sum_{i=1}^{m}J(W,b;x^{i},y^{i})]+\frac{\lambda}{2}\sum_{l=1}^{n_{l}-1}\sum_{i=1}^{s_{t}}\sum_{j=1}^{s_{t}+1}(W_{ji}^l)^2 $$
 
 
 
