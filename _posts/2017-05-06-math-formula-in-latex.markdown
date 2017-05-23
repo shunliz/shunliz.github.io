@@ -55,7 +55,7 @@ cos\theta =\frac{A \cdot B }{|A||\times B|}=\frac{\sum_{i=1}^{n}(A_{i}\times B_{
 
 $$ cos\theta =\frac{A \cdot B }{|A||\times B|}=\frac{\sum_{i=1}^{n}(A_{i}\times B_{i})}{\sqrt{\sum_{i=1}^{n}A_{i}^{2}} \times \sqrt{\sum_{i=1}^{n}B_{i}^{2}} } $$
 
-
+$$ f(z) = tanh(z) = \dfrac{e^z-e^{-z}}{e^z+e^{-z}} $$
 
 
 
