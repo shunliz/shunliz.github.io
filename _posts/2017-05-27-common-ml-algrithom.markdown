@@ -21,11 +21,11 @@ $$ p(c_{i}|w) = \frac{p(w|c_{i})p(c_{i})}{p(w))} $$
 
 $$ p(w|c_{i}) $$
 
-的计算方法，而由朴素贝叶斯的前提假设可知，
+的计算方法，而由朴素贝叶斯的前提假设可知,
 
-$$ p(w_{0}，w_{1}，w_{2}...w_{N}|c_{i})=p(w_{0}|c_{i})p(w_{1}|c_{i})p(w_{2}|c_{i})... p(w_{N}|c_{i}) $$，
+$$ p(w_{0}，w_{1}，w_{2}...w_{N}|c_{i})=p(w_{0}|c_{i})p(w_{1}|c_{i})p(w_{2}|c_{i})... p(w_{N}|c_{i}) $$
 
-因此一般有两种，一种是在类别为ci的那些样本集中，找到wj出现次数的总和，然后除以该样本的总和；第二种方法是类别为ci的那些样本集中，找到wj出现次数的总和，然后除以该样本中所有特征出现次数的总和。 　　
+因此一般有两种，一种是在类别为ci的那些样本集中，找到wj出现次数的总和，然后除以该样本的总和；第二种方法是类别为ci的那些样本集中，找到wj出现次数的总和，然后除以该样本中所有特征出现次数的总和.
 
 3. 如果
 
@@ -96,33 +96,36 @@ $$ l(\theta)=logL(\theta)=\sum_{i=1}^{m}y^ilogh(x^i)+(1-y^i)log(1-h(x^i)) $$
 　　
 3. 其实它的loss function为-l(θ)，因此我们需使loss function最小，可采用梯度下降法得到。梯度下降法公式为:
 
-$$ \frac{\partial }{\partial \theta_{j}}l(\theta)=(y\frac {1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)})\frac{\partial }{\partial \theta_{j}}g(\theta^Tx)=\left (y\frac{1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)}\right )=\left ( y\frac{1}{g(\theta^Tx)}-(1-y)\frac {1}{1-g(\theta^Tx)} \right )g(\theta^Tx)(1-g(\theta^Tx)\frac{\partial }{\partial \theta_{j}}\theta^Tx=(y(1-g(\theta^Tx))-(1-y)g(\theta^Tx))x_{j}=(y-h_{\theta(x)})x_{j} $$
+$$ \frac{\partial }{\partial \theta_{j}}l(\theta)=(y\frac {1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)})\frac{\partial }{\partial \theta_{j}}g(\theta^Tx)=\left (y\frac{1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)}\right )=\left ( y\frac{1}{g(\theta^Tx)}-(1-y)\frac {1}{1-g(\theta^Tx)} \right )g(\theta^Tx)(1-g(\theta^Tx)\frac{\partial }{\partial \theta_{j}}\theta^Tx $$
+
+$$ =(y(1-g(\theta^Tx))-(1-y)g(\theta^Tx))x_{j}=(y-h_{\theta(x)})x_{j} $$
 
 $$ \theta_{j}:=\theta_{j}+\alpha(y^i-h_{\theta}(x^i))x^i_{j} $$
 
-## Logistic回归优点：
-    1. 实现简单
-    2. 分类时计算量非常小，速度很快，存储资源低；
+## Logistic回归优点:
+1. 实现简单
+2. 分类时计算量非常小，速度很快，存储资源低；
 
 ## 缺点：
-    1. 容易欠拟合，一般准确度不太高
-    2. 只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；
+1. 容易欠拟合，一般准确度不太高
+2. 只能处理两分类问题（在此基础上衍生出来的softmax可以用于多分类），且必须线性可分；
 
 # 线性回归
 
 线性回归才是真正用于回归的，而不像logistic回归是用于分类，其基本思想是用梯度下降法对最小二乘法形式的误差函数进行优化，当然也可以用normal equation直接求得参数的解，结果为：
 
-　　
+$$ \hat{w}=(X^TX)^{-1}X^Ty $$
 
-　　而在LWLR（局部加权线性回归）中，参数的计算表达式为:
+而在LWLR（局部加权线性回归）中，参数的计算表达式为:
 
-　　
+$$ \hat{w}=(X^TWX)^{-1}X^TWy $$
 
-　　因为此时优化的是：
+因为此时优化的是：
 
-　　
+1. Fit \theta to minimize $$ \sum_{i}^{n}w^{(i)}(y^{(i)}-\theta^Tx^{(i)})^2 $$
+2. Outpu $$ \theta^Tx $$.
 
-　　由此可见LWLR与LR不同，LWLR是一个非参数模型，因为每次进行回归计算都要遍历训练样本至少一次。
+由此可见LWLR与LR不同，LWLR是一个非参数模型，因为每次进行回归计算都要遍历训练样本至少一次。
 
 ## 线性回归优点：
 
