@@ -96,7 +96,9 @@ $$ l(\theta)=logL(\theta)=\sum_{i=1}^{m}y^ilogh(x^i)+(1-y^i)log(1-h(x^i)) $$
 　　
 3. 其实它的loss function为-l(θ)，因此我们需使loss function最小，可采用梯度下降法得到。梯度下降法公式为:
 
-$$ \frac{\partial }{\partial \theta_{j}}l(\theta)=(y\frac {1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)})\frac{\partial }{\partial \theta_{j}}g(\theta^Tx)=\left (y\frac{1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)}\right )=\left ( y\frac{1}{g(\theta^Tx)}-(1-y)\frac {1}{1-g(\theta^Tx)} \right )g(\theta^Tx)(1-g(\theta^Tx)\frac{\partial }{\partial \theta_{j}}\theta^Tx $$
+$$ \frac{\partial }{\partial \theta_{j}}l(\theta)=(y\frac {1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)})\frac{\partial }{\partial \theta_{j}}g(\theta^Tx)=\left (y\frac{1}{g(\theta^Tx)}-(1-y)\frac{1}{1-g(\theta^Tx)}\right ) $$
+
+$$ =\left ( y\frac{1}{g(\theta^Tx)}-(1-y)\frac {1}{1-g(\theta^Tx)} \right )g(\theta^Tx)(1-g(\theta^Tx)\frac{\partial }{\partial \theta_{j}}\theta^Tx $$
 
 $$ =(y(1-g(\theta^Tx))-(1-y)g(\theta^Tx))x_{j}=(y-h_{\theta(x)})x_{j} $$
 
@@ -327,9 +329,11 @@ m代表商品的个数，n代表用户的个数，则U矩阵的每一行代表�
 # pLSA
 
 pLSA由LSA发展过来，而早期LSA的实现主要是通过SVD分解。pLSA的模型图如下：
+
 ![images11](../../../../images/mlalg/2730002-5ab0df3e061f44fb.png)
 
 公式中的意义如下：
+
 ![images11](../../../../images/mlalg/2730002-5f26bddd158e7559.png)
 
 具体可以参考[2010龙星计划：机器学习中对应的主题模型那一讲](http://bcmi.sjtu.edu.cn/ds/download.html)
@@ -337,6 +341,7 @@ pLSA由LSA发展过来，而早期LSA的实现主要是通过SVD分解。pLSA的
 # LDA
 
 主题模型，概率图如下：
+
 ![images11](../../../../images/mlalg/2730002-0cf7d399d85f8a96.jpg)
 和pLSA不同的是LDA中假设了很多先验分布，且一般参数的先验分布都假设为Dirichlet分布，其原因是共轭分布时先验概率和后验概率的形式相同。
 
@@ -376,9 +381,13 @@ M步：结合E步求出的隐含变量条件概率，求出似然函数下界函
 公式如下所示：
 
 (E-step) 对每一个i， 另：
+
 $$ Q_{i}(z^{(i)}):=p(z^{(i)}|x^{(i)};\theta) $$
+
 (M-step),另：
 $$ \theta:=argmax_{\theta}\sum_{i}\sum_{z^{(i)}}Q_{i}(Z^{(i)})log\frac {p(x^{(i)},z^{(i)};\theta)}{Q_{i}(z^{(i)})} $$
+
+
 M步公式中下界函数的推导过程：
 
 $$ \sum_{i}logp(x^{(i)};\theta)=\sum_{i}log\sum_{z^{(i)}}p(x^{(i)},z^{(i)};\theta)=\sum_{i}log\sum_{z^{(i)}}Q_{i}(z^{(i)})\frac {p(x^{(i)},z^{(i)};\theta)}{Q_{i}^{(i)}}\geq \sum_{i}\sum_{z^{(i)}}Q_{i}(z^{(i)})log\frac{p(x^{(i)},z^{(i)};\theta)}{Q_{i}(z^{(i)})} $$
@@ -408,12 +417,15 @@ Aprioir需要扫描项目表多遍，从一个项目开始扫描，舍去掉那�
 看下面这个例子:
 
 元素项目表格：
+
 ![imagesss1](../../../../images/mlalg/2730002-f90e4253262ac682.png)
 
 如果每个步骤不去掉非频繁项目集，则其扫描过程的树形结构如下：
+
 ![imagesss2](../../../../images/mlalg/2730002-cf21f4706df257d2.png)
 
 在其中某个过程中，可能出现非频繁的项目集，将其去掉（用阴影表示）为：
+
 ![imagesss2](../../../../images/mlalg/2730002-207aab36bd8d6ba6.png)
 
 上面的内容主要参考的是machine learning in action这本书。
