@@ -1,8 +1,10 @@
 * content
-{:toc}
+  {:toc}
 
-2017书单
------------------------------------------------------------------
+## 2017书单
 
-+ 《Deeplearning4j Documentation》
-+ 《数理统计》
+* 《Deeplearning4j Documentation》
+* 《数理统计》
+
+
+
