@@ -9,12 +9,13 @@
 
     <div class="container-fluid v-center">
       <div class="row-fluid">
-        <!-- side - 左边栏 -->
-        {% include sider.html %}
-        <!-- main articles - 右边内容 -->
         <div class="col-xs-9 span9">
+          <!-- main articles -->
           {{ content }}
+          <!-- article ends -->
         </div>
+        <!-- side -->
+        {% include sider.html %}
       </div>
     </div>
 
