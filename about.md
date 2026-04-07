@@ -191,7 +191,7 @@ permalink: /about/
 </td>
   </tr>
 </table>
-***
+
 
 ## Education:
 ***
@@ -200,6 +200,7 @@ permalink: /about/
 | --------------- | ----------------------------------- | -------------------- | --------------- |
 | 2004,9 - 2007,4 | Northwest poliytechnical university | Computer Science     | Master degree   |
 | 1999,9-2003,7   | Shaanxi Normal university           | Education technology | Bachelor degree |
+
 
 ## Others：
 ***
