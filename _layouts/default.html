@@ -7,15 +7,17 @@
 
     {% include header.html %}
 
-
-    <!-- main articles -->
-    {{ content }}
-    <!-- article ends -->
-  </div>
-  <!-- side -->
-  {% include sider.html %}
-
-</div>
+    <div class="container-fluid v-center">
+      <div class="row-fluid">
+        <div class="col-xs-9 span9">
+          <!-- main articles -->
+          {{ content }}
+          <!-- article ends -->
+        </div>
+        <!-- side -->
+        {% include sider.html %}
+      </div>
+    </div>
 
     {% include footer.html %}
 

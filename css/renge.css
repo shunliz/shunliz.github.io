@@ -15,3 +15,39 @@
 .miaopasi {
   margin-top: 10px;
 }
+
+/* 树形菜单样式 */
+#article-tree .category-posts {
+  margin-left: 20px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+#article-tree .category-item > a {
+  color: #337ab7;
+  font-size: 14px;
+}
+
+#article-tree .category-posts li a {
+  color: #555;
+  font-size: 13px;
+  padding: 3px 10px;
+  display: block;
+}
+
+#article-tree .category-posts li a:hover {
+  background-color: #f5f5f5;
+  text-decoration: none;
+}
+
+/* 展开/收起样式 */
+#article-tree .category-item.has-posts > a::before {
+  content: "▶ ";
+  font-size: 10px;
+  margin-right: 5px;
+  transition: transform 0.2s;
+}
+
+#article-tree .category-item.has-posts.expanded > a::before {
+  content: "▼ ";
+}
