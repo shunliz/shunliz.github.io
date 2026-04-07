@@ -3,12 +3,12 @@ layout: default
 title: Categories
 group: navigation
 ---
-<h3 class="heading text-right">目录</h3>
+<h3 class="heading">目录</h3>
 
 
 {% for category in site.categories %}
-  <h2 class="text-right" id="{{ category[0] }}"><a href="#{{ category[0] }}">{{ category[0] }}</a></h2>
-  <ul class="text-right">
+  <h2 id="{{ category[0] }}"><a href="#{{ category[0] }}">{{ category[0] }}</a></h2>
+  <ul>
     {% assign pages_list = category[1] %}
 
     {% for node in pages_list %}

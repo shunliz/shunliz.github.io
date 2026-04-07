@@ -4,7 +4,9 @@ title: About
 permalink: /about/
 ---
 
-# Welcome to the zsl6658!
+# Welcome to the shunliz!
+
+[中文](about_cn.md)          [English](about.md)
 
 Steven Zhou (周顺利) Male
 
@@ -84,21 +86,21 @@ A method to assign service to a group of User.
 
 
 ifdef CODER
-  
+
 define C++er
 
    if(like){
 
        try:
-
+    
           ping zsl6658@126.com
-
+    
        except Exception as e:
-
+    
           QQ=57575233
-
+    
        else:
-
+    
            die();
 
    } 

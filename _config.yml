@@ -24,6 +24,6 @@ github_username:  shunliz
 
 # Build settings
 markdown: kramdown
-paginate: 3
+paginate: 20
 gems: [jekyll-paginate]
 paginate_path: "/page/:num"

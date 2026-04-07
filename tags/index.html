@@ -3,12 +3,12 @@ layout: default
 title: Tags
 group: navigation
 ---
-<h3 class="heading text-right">标签</h3>
+<h3 class="heading">标签</h3>
 
 
 {% for tag in site.tags %}
-  <h2 class="heading text-right" id="{{ tag[0] }}"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></h2>
-  <ul class="text-right">
+  <h2 class="heading" id="{{ tag[0] }}"><a href="#{{ tag[0] }}">{{ tag[0] }}</a></h2>
+  <ul>
     {% assign pages_list = tag[1] %}
 
     {% for node in pages_list %}
