@@ -10,7 +10,8 @@
   float: none;
 }
 .v-center {
-    width:1024px;
+    width: 100%;
+    max-width: 1200px;
     margin-left: 20px;
 }
 .miaopasi {
