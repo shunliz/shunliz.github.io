@@ -24,22 +24,31 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 20px;
+  table-layout: fixed;
 }
 table th,
 table td {
   padding: 8px 12px;
   border: 1px solid #ddd;
   text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 table th {
   background-color: #f5f5f5;
   font-weight: bold;
+  width: 120px;
 }
 table tr:nth-child(even) {
   background-color: #fafafa;
 }
 table tr:hover {
   background-color: #f5f5f5;
+}
+
+/* 职责列更宽 */
+table td:nth-child(5) {
+  width: auto;
 }
 
 /* Markdown 表格样式 */

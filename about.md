@@ -17,13 +17,13 @@ permalink: /about/
 | wechat                                                       | shunliz                                              |
 | QQ                                                           | 57575233                                             |
 
- [github](https://github.com/shunliz) 
- [zhihu](https://www.zhihu.com/people/zsl6658) 
- [douyin](zsl20650) 
- [xiaohongshu]() 
- [shipinhao]() 
- [CSDN](http://blog.csdn.net/shatty) 
- [LinkedIn](https://www.linkedin.com/in/steven-zhou-3285a351/?locale=zh) 
+ [github](https://github.com/shunliz)
+ [zhihu](https://www.zhihu.com/people/zsl6658)
+ [douyin](zsl20650)
+ [xiaohongshu]()
+ [shipinhao]()
+ [CSDN](http://blog.csdn.net/shatty)
+ [LinkedIn](https://www.linkedin.com/in/steven-zhou-3285a351/?locale=zh)
  [bilibili](https://space.bilibili.com/205201715)
 
 ***
@@ -34,8 +34,8 @@ permalink: /about/
 - Extensive knowledge of Java web, such as spring boot, spring cloud, JavaScript, Postgresql, Redis.
 
 - Familiar with public cloud, hands on experience on GCP, AWS and Ali Cloud.
-- Lead two company’s cloud platform building from 0 to 1. The two platforms support both Container (Kubernetes) and compute virtualization (Openstack+kvm) from Iaas to Paas layer. 
-- Solid knowledge of the computer science. 
+- Lead two company's cloud platform building from 0 to 1. The two platforms support both Container (Kubernetes) and compute virtualization (Openstack+kvm) from Iaas to Paas layer.
+- Solid knowledge of the computer science.
 - Good English skills both written and spoken.
 
 ***
@@ -60,10 +60,9 @@ permalink: /about/
   </tr>
   <tr>
     <td>Responsibilities:</td>
-    <td>☑Responsible for the architecture design of the msxf’s cloud platform from Iaas to Paas layer. The resource layer built on top of Kubernetes, OpenStack and Bare-metal. Provide services like ECS, EBS, VPC, OSS, ECI, BMS, etc. Paas layer include the RDS, Kafka Service, Devops platform etc. </br>
-☑Working on the solution of the cloud platform’s multi-site and cross DC high availability.</br>
-☑Responsible for the on-premise application migration to cloud platform.</br>
-</td>
+    <td>☑Responsible for the architecture design of the msxf's cloud platform from Iaas to Paas layer. The resource layer built on top of Kubernetes, OpenStack and Bare-metal. Provide services like ECS, EBS, VPC, OSS, ECI, BMS, etc. Paas layer include the RDS, Kafka Service, Devops platform etc. <br>
+☑Working on the solution of the cloud platform's multi-site and cross DC high availability.<br>
+☑Responsible for the on-premise application migration to cloud platform.<br></td>
   </tr>
 </table>
 <table>
@@ -84,11 +83,10 @@ permalink: /about/
   </tr>
   <tr>
     <td>Responsibilities:</td>
-      <td>Work as Technical Lead in HSBC Technology, lead a 7 people team, responsible for the Devops Tooling and solution development for a 4000 more people group. Communicate with global team to collect requirement and manage the stakeholder’s expectations. </br>
-☑Communicate with global team to collect requirement and feed backs, manage the global stakeholders’ expectations. </br>
-☑Lead 7 people team to analyze requirements, design solution and development and deliver production to user in Agile way.</br>  
-☑Support development team to migrate their on-premise apps which run on VM to the public cloud (GCP). Built IaC solution using Jekins, Ansible, Terraform, Packer, Helm chart to deploy apps to GCP.</br>
-</td>
+      <td>Work as Technical Lead in HSBC Technology, lead a 7 people team, responsible for the Devops Tooling and solution development for a 4000 more people group. Communicate with global team to collect requirement and manage the stakeholder's expectations. <br>
+☑Communicate with global team to collect requirement and feed backs, manage the global stakeholders' expectations. <br>
+☑Lead 7 people team to analyze requirements, design solution and development and deliver production to user in Agile way.<br>  
+☑Support development team to migrate their on-premise apps which run on VM to the public cloud (GCP). Built IaC solution using Jekins, Ansible, Terraform, Packer, Helm chart to deploy apps to GCP.<br></td>
   </tr>
 </table>
 <table>
@@ -109,12 +107,12 @@ permalink: /about/
   </tr>
   <tr>
     <td>Responsibilities:</td>
-      <td>Responsible for the development of the private cloud product which build on the OpenStack. Lead 12~15 people and designed and developed many compute virtualization related features, Such as DRS and HA. The product runs on a 1000+ machines cluster and supports the user business successfully. </br>
-☑Lead the team from not familiar with OpenStack to familiar with OpenStack and can fix bug and develop new feature for OpenStack. </br>
-☑Get extensive knowledge of the cloud technology. Own the compute virtualization area, including Nova, Heat, Keystone, Ceilometer. Familiar with Storage virtualization area (Cinder, Ceph) and Network virtualization area (Neutron)..</br>  
+      <td>Responsible for the development of the private cloud product which build on the OpenStack. Lead 12~15 people and designed and developed many compute virtualization related features, Such as DRS and HA. The product runs on a 1000+ machines cluster and supports the user business successfully. <br>
+☑Lead the team from not familiar with OpenStack to familiar with OpenStack and can fix bug and develop new feature for OpenStack. <br>
+☑Get extensive knowledge of the cloud technology. Own the compute virtualization area, including Nova, Heat, Keystone, Ceilometer. Familiar with Storage virtualization area (Cinder, Ceph) and Network virtualization area (Neutron)..<br></td>
 </td>
   </tr>
-</tab
+</table>
 
 
 <table>
@@ -136,8 +134,8 @@ permalink: /about/
   <tr>
     <td>Responsibilities:</td>
       <td>
-☑Responsible for development of the IBM Platform Resource Scheduler, which is an enhanced OpenStack Nova scheduler and provide similar function like VMware DRS. </br>
-☑Design and developed the “CPU utilization-based scheduling” feature for PRS. Which will balance the cluster CPU load based on the host’s CPU utilization.</br>  
+☑Responsible for development of the IBM Platform Resource Scheduler, which is an enhanced OpenStack Nova scheduler and provide similar function like VMware DRS. <br>
+☑Design and developed the "CPU utilization-based scheduling" feature for PRS. Which will balance the cluster CPU load based on the host's CPU utilization.<br></td>
 </td>
   </tr>
 </table>
@@ -161,8 +159,8 @@ permalink: /about/
   <tr>
     <td>Responsibilities:</td>
       <td>
-☑Responsible for the development of a web desktop for the application virtualization system. </br>
-☑Using jQuery to operate the DOM and implemented some features, such as the application add and remove on desktop, net disk file operations.</br>  
+☑Responsible for the development of a web desktop for the application virtualization system. <br>
+☑Using jQuery to operate the DOM and implemented some features, such as the application add and remove on desktop, net disk file operations.<br></td>
 </td>
   </tr>
 </table>
@@ -186,8 +184,8 @@ permalink: /about/
   <tr>
     <td>Responsibilities:</td>
       <td>
-☑Responsible for the development and maintenance of a web-based Network Management System. </br>
-☑Focused on the development and maintenance of the Accounting, Authentication, Authorization component, both the back-end server and the web-based configuration platform.</br>  
+☑Responsible for the development and maintenance of a web-based Network Management System. <br>
+☑Focused on the development and maintenance of the Accounting, Authentication, Authorization component, both the back-end server and the web-based configuration platform.<br></td>
 </td>
   </tr>
 </table>
@@ -205,7 +203,7 @@ permalink: /about/
 ## Others：
 ***
 
-- Built two private cloud platform for two company 
+- Built two private cloud platform for two company
 - Own a 1.4k star github repo
 - Openstack core member
 

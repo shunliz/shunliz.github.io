@@ -59,10 +59,9 @@ permalink: /about_cn/
   </tr>
   <tr>
     <td>职责：</td>
-    <td>☑负责 msxf 云平台从 IaaS 到 PaaS 层的架构设计。资源层基于 Kubernetes、OpenStack 和裸金属构建，提供 ECS、EBS、VPC、OSS、ECI、BMS 等服务。PaaS 层包括 RDS、Kafka 服务、Devops 平台等。</br>
-☑参与云平台多站点和跨数据中心高可用方案的解决方案设计。</br>
-☑负责将本地应用迁移到云平台。</br>
-</td>
+    <td>☑负责 msxf 云平台从 IaaS 到 PaaS 层的架构设计。资源层基于 Kubernetes、OpenStack 和裸金属构建，提供 ECS、EBS、VPC、OSS、ECI、BMS 等服务。PaaS 层包括 RDS、Kafka 服务、Devops 平台等。<br>
+☑参与云平台多站点和跨数据中心高可用方案的解决方案设计。<br>
+☑负责将本地应用迁移到云平台。<br></td>
   </tr>
 </table>
 <table>
@@ -83,11 +82,10 @@ permalink: /about_cn/
   </tr>
   <tr>
     <td>职责：</td>
-      <td>担任汇丰技术部技术负责人，带领 7 人团队，负责为 4000+ 人的集团提供 Devops 工具和解决方案开发。与全球团队沟通，收集需求并管理相关方期望。</br>
-☑与全球团队沟通，收集需求和反馈，管理全球相关方期望。</br>
-☑带领 7 人团队分析需求、设计方案、开发并以敏捷方式向用户交付生产环境。</br>
-☑支持开发团队将本地运行在虚拟机上的应用迁移到公有云 (GCP)。使用 Jenkins、Ansible、Terraform、Packer、Helm chart 构建 IaC 解决方案，将应用部署到 GCP。</br>
-</td>
+      <td>担任汇丰技术部技术负责人，带领 7 人团队，负责为 4000+ 人的集团提供 Devops 工具和解决方案开发。与全球团队沟通，收集需求并管理相关方期望。<br>
+☑与全球团队沟通，收集需求和反馈，管理全球相关方期望。<br>
+☑带领 7 人团队分析需求、设计方案、开发并以敏捷方式向用户交付生产环境。<br>
+☑支持开发团队将本地运行在虚拟机上的应用迁移到公有云 (GCP)。使用 Jenkins、Ansible、Terraform、Packer、Helm chart 构建 IaC 解决方案，将应用部署到 GCP。<br></td>
   </tr>
 </table>
 <table>
@@ -108,10 +106,9 @@ permalink: /about_cn/
   </tr>
   <tr>
     <td>职责：</td>
-      <td>负责基于 OpenStack 的私有云产品开发。带领 12~15 人的团队，设计并开发了多个计算虚拟化相关功能，如 DRS 和 HA。该产品运行在 1000+ 台机器的集群上，成功支撑用户业务。</br>
-☑带领团队从不熟悉 OpenStack 到熟悉 OpenStack，能够修复 bug 并开发新功能。</br>
-☑获得丰富的云技术知识。负责计算虚拟化领域，包括 Nova、Heat、Keystone、Ceilometer。熟悉存储虚拟化 (Cinder、Ceph) 和网络虚拟化 (Neutron) 领域。</br>
-</td>
+      <td>负责基于 OpenStack 的私有云产品开发。带领 12~15 人的团队，设计并开发了多个计算虚拟化相关功能，如 DRS 和 HA。该产品运行在 1000+ 台机器的集群上，成功支撑用户业务。<br>
+☑带领团队从不熟悉 OpenStack 到熟悉 OpenStack，能够修复 bug 并开发新功能。<br>
+☑获得丰富的云技术知识。负责计算虚拟化领域，包括 Nova、Heat、Keystone、Ceilometer。熟悉存储虚拟化 (Cinder、Ceph) 和网络虚拟化 (Neutron) 领域。<br></td>
   </tr>
 </table>
 
@@ -135,9 +132,8 @@ permalink: /about_cn/
   <tr>
     <td>职责：</td>
       <td>
-☑负责开发 IBM Platform Resource Scheduler (PRS)，这是增强版的 OpenStack Nova 调度器，提供类似 VMware DRS 的功能。</br>
-☑为 PRS 设计并开发了"基于 CPU 利用率的调度"功能，可根据主机 CPU 利用率平衡集群负载。</br>
-</td>
+☑负责开发 IBM Platform Resource Scheduler (PRS)，这是增强版的 OpenStack Nova 调度器，提供类似 VMware DRS 的功能。<br>
+☑为 PRS 设计并开发了"基于 CPU 利用率的调度"功能，可根据主机 CPU 利用率平衡集群负载。<br></td>
   </tr>
 </table>
 
@@ -160,9 +156,8 @@ permalink: /about_cn/
   <tr>
     <td>职责：</td>
       <td>
-☑负责应用虚拟化系统 Web 桌面端的开发。</br>
-☑使用 jQuery 操作 DOM，实现了一些功能，如桌面上的应用添加和移除、网盘文件操作等。</br>
-</td>
+☑负责应用虚拟化系统 Web 桌面端的开发。<br>
+☑使用 jQuery 操作 DOM，实现了一些功能，如桌面上的应用添加和移除、网盘文件操作等。<br></td>
   </tr>
 </table>
 
