@@ -11,9 +11,33 @@
 }
 .v-center {
     width:1024px;
+    margin-left: 20px;
 }
 .miaopasi {
   margin-top: 10px;
+}
+
+/* 导航栏样式 */
+.navbar {
+  background: transparent;
+  border: none;
+  margin-bottom: 0;
+}
+.navbar-default {
+  background: transparent;
+  border: none;
+}
+.navbar-brand {
+  float: left !important;
+}
+.navbar-nav {
+  float: left !important;
+}
+.navbar-default .navbar-brand {
+  color: #555;
+}
+.navbar-default .navbar-brand:hover {
+  color: #333;
 }
 
 /* 树形菜单样式 */
