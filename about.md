@@ -4,8 +4,6 @@ title: About
 permalink: /about/
 ---
 
-# Welcome to shunliz!
-
 [中文](about_cn.md)          [English](about.md)
 
 ---

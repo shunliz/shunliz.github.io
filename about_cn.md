@@ -4,8 +4,6 @@ title: 关于
 permalink: /about_cn/
 ---
 
-# 欢迎访问 shunliz 的个人站点！
-
 [中文](about_cn.md)          [English](about.md)
 
 ------
