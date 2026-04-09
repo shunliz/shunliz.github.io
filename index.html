@@ -2,31 +2,6 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
-<!-- main articles -->
-<h2>
-  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-</h2>
-<h4><small>{{ post.date | date: "%b %-d, %Y" }}</small></h4>
-        {% if post.description %}
-            {{ post.description | strip_html | strip_newlines | truncate: 250 }}
-            <p><a class="btn" href="{{ post.url | prepend: site.baseurl }}">Read more »</a></p>
-            {% include tags.html %}
-        {% else %}
-            {{ post.content | strip_html | strip_newlines | truncate: 250 }}
-            <p><a class="btn" href="{{ post.url | prepend: site.baseurl }}">Read more »</a></p>
-            {% include tags.html %}
-        {% endif %}
-
-<hr>
-<!-- article ends -->
-{% endfor %}
-
-<ul class="pager">
-  {% if paginator.previous_page %}
-      <li class="previous"><a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer</a></li>
-  {% endif %}
-    {% if paginator.next_page %}
-      <li class="next"><a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older &rarr;</a></li>
-  {% endif %}
-</ul>
+<div class="about-links">
+  <p>点击查看: <a href="/about_cn">中文版</a> | <a href="/about">English</a></p>
+</div>
