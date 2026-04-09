@@ -14,11 +14,11 @@
 # please change the belowing settings to your own.
 
 # Site settings
-title: Shunliz
+title: Shunliz个人主页
 email: zsl6658@126.com
 description: Shunliz's personal blog
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://github.io/shunliz" # the base hostname & protocol for your site
+url: "https://shunliz.github.io" # the base hostname & protocol for your site
 twitter_username:
 github_username:  shunliz
 
