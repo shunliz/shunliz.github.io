@@ -15,8 +15,6 @@ permalink: /about/
 - WeChat: shunliz
 - QQ: 57575233
 
-Social: [github](https://github.com/shunliz) | [zhihu](https://www.zhihu.com/people/zsl6658) | [douyin](zsl20650) | [CSDN](http://blog.csdn.net/shatty) | [LinkedIn](https://www.linkedin.com/in/steven-zhou-3285a351/?locale=zh) | [bilibili](https://space.bilibili.com/205201715)
-
 ---
 
 ### An software engineer. Worked in HSBC, IBM, HuaWei, HP.

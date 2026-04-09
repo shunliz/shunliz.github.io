@@ -15,8 +15,6 @@ permalink: /about_cn/
 - 微信: shunliz
 - QQ: 57575233
 
-社交: [github](https://github.com/shunliz) | [知乎](https://www.zhihu.com/people/zsl6658) | [抖音](zsl20650) | [CSDN](http://blog.csdn.net/shatty) | [LinkedIn](https://www.linkedin.com/in/steven-zhou-3285a351/?locale=zh) | [bilibili](https://space.bilibili.com/205201715)
-
 ---
 
 ### 一名软件工程师。曾任职于汇丰银行、IBM、华为、惠普。
